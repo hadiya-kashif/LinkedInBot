@@ -1,17 +1,14 @@
-import pyautogui
 import pyautogui as pt
-from pynput.mouse import Controller
 from time import sleep
 
 
 pt.FAILSAFE = True
-mouse = Controller()
 
 
 def nav_to_any_image(image, clicks, off_x=0, off_y=0):
     position = pt.locateCenterOnScreen(image, confidence=0.8)
 
-    if position is None :
+    if position is None:
         print(f'{image} not found')
         return 0
     else:
@@ -57,7 +54,7 @@ def connect():
     nav_to_any_image('Images/messageArrow.png', 1)
     nav_to_any_image('Images/myNetwork.png', 1)
     sleep(3)
-    pyautogui.press('down', presses=12)
+    pt.press('down', presses=12)
     sleep(5)
     for i in range(12):
         nav_to_any_image('Images/connect.png', 1)
@@ -65,9 +62,8 @@ def connect():
         nav_to_any_image('Images/cancel.png', 1)
         sleep(1)
         if i % 4 == 0:
-            pyautogui.press('down', presses=6)
+            pt.press('down', presses=6)
             sleep(2)
-
 
 
 sleep(1)
