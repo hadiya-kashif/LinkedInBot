@@ -1,5 +1,10 @@
 # LinkedInBot
-Run on pychram
+Run on pychram.
+Intsall the following libraries before executing the code:
+pip install pyautogui
+pip install pynput
+pip install pillow
+pip install opencv-python
 All other tabs other than pycharm window should be minimized while running this code.
 Google Chrome should be on desktop.
 Enter your credentials in enter_credentials(). A comment is added in the code file to guide.
